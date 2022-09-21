@@ -1,9 +1,4 @@
-import { ReactRouterDOM } from 'react-router'
 import React from 'react';
-
-export const Route = ReactRouterDOM.Route;
-export const Link = ReactRouterDOM.Link;
-export const HashRouter = ReactRouterDOM.HashRouter;
 export const UserContext = React.createContext(null);
 
 function Card(props) {
