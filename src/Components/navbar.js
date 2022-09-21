@@ -3,7 +3,7 @@ function Navbar() {
       <>
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="container-fluid">
-            <a className="navbar-brand" aria-current="page" href="#">
+            <a className="navbar-brand" aria-current="page" href="#/Home/">
               Bad Bank
             </a>
             <button
