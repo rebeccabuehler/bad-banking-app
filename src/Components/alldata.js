@@ -6,7 +6,7 @@ function AllData() {
     return(
             <h1>
                 AllData <br/>
-                {JSON.stringify(ctx)}
+                {JSON.stringify(ctx.users)}
             </h1>
     );
 }

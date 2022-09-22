@@ -9,10 +9,10 @@ function Login() {
     const [status, setStatus] = React.useState("");
     const ctx = React.useContext(UserContext);
 
-    function validate(field, label) {
-        if(!field) {
-            setStatus('Error ' + label);
-            setTimeout(() => setStatus(''), 3000);
+    function validate(email, password) {
+        if(email !== ctx.users.email || password !== ctx.users.password) {
+            setStatus('Error email or password does not match');
+            //setTimeout(() => setStatus(''), 6000);
             return false;
         }
         return true;
