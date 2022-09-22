@@ -1,5 +1,5 @@
 import React from "react";
-import UserContext from './context';
+import {UserContext} from './context';
 
 function Withdraw() {
     const ctx = React.useContext(UserContext);

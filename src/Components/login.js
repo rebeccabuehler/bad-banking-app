@@ -1,5 +1,5 @@
 import React from "react";
-import UserContext from './context';
+import {UserContext} from './context';
 import Card from './context';
 
 function Login() {
@@ -60,8 +60,9 @@ function Login() {
                 </>
                 ) : ( 
                     <>
-                    <h5>Success</h5>
-                    <h1>{JSON.stringify(ctx.users[1])}</h1>
+                    <h5>Success {JSON.stringify(ctx.users.name)}</h5>
+                    <a href="/Component/deposit" className="btn btn-light">Deposit Money</a>
+                    <a href="/Component/withdraw" className="btn btn-light">Withdraw Money</a>
                     </>
                 )}
         />
