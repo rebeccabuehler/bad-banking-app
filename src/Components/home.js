@@ -1,5 +1,6 @@
 import React from "react";
 import Card from './context';
+import bank from "./bank.png";
 
 function Home() {
     return(
@@ -9,7 +10,7 @@ function Home() {
         header="Bad Bank Landing Page"
         title="Welcome to the Bank"
         text="You can use this bank"
-        body={(<img src="bank.png" className="img-fluid" alt="Bank Building"/>)}
+        body={(<img src={bank} className="img-fluid" alt="Bank Building"/>)}
         />
     );
 }

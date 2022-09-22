@@ -16,12 +16,12 @@ function App() {
     <Navbar/>
     <UserContext.Provider value={{users: [{name: 'Rebecca', email:'rebecca.buehler02@gmail.com', password:'secret2022!', balance:100}]}}>
     <Routes>
-    <Route path="/" exact component={Home} />
-    <Route path="/CreateAccount/" component={CreateAccount} />
-    <Route path="/login/" component={Login} />
-    <Route path="/deposit/" component={Deposit} />
-    <Route path="/withdraw/" component={Withdraw} />
-    <Route path="/alldata/" component={AllData} />
+    <Route path="/Component/home" exact element={<Home/>} />
+    <Route path="/Component/createaccount" element={<CreateAccount/>} />
+    <Route path="/Component/login" element={<Login/>} />
+    <Route path="/Component/deposit" element={<Deposit/>} />
+    <Route path="/Component/withdraw" element={<Withdraw/>} />
+    <Route path="/Component/alldata" element={<AllData/>} />
     </Routes>
     </UserContext.Provider>
     </BrowserRouter>

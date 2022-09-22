@@ -5,7 +5,7 @@ function Navbar() {
       <>
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="container-fluid">
-            <a className="navbar-brand" aria-current="page" href="#/Home/">
+            <a className="navbar-brand" aria-current="page" href="/Component/home">
               Bad Bank
             </a>
             <button
@@ -22,32 +22,27 @@ function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="#/CreateAccount/">
+                  <a className="nav-link" href="/Component/createaccount">
                     CreateAccount
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#/login/">
+                  <a className="nav-link" href="/Component/login">
                     Login
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#/deposit/">
+                  <a className="nav-link" href="/Component/deposit">
                     Deposit
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#/withdraw/">
+                  <a className="nav-link" href="/Component/withdraw">
                     Withdraw
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#/balance/">
-                    Balance
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#/alldata/">
+                  <a className="nav-link" href="/Component/alldata">
                     AllData
                   </a>
                 </li>
