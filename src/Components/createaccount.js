@@ -53,7 +53,7 @@ function CreateAccount() {
           ) : ( 
               <>
               <h5>Success</h5>
-              <button type="submit" className="btn btn-light" onClick={clearForm}>Add Another Account</button>
+              <button type="submit" className="btn btn-light" disable={name ? "name" : ""} onClick={clearForm}>Add Another Account</button>
               <br/>
               <a href="/Component/login" className="btn btn-light">Go to Login</a>
               </>
