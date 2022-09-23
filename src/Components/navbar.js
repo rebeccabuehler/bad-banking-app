@@ -29,11 +29,6 @@ function Navbar() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/Component/login">
-                    Login
-                  </a>
-                </li>
-                <li className="nav-item">
                   <a className="nav-link" href="/Component/deposit">
                     Deposit
                   </a>
