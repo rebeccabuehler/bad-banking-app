@@ -11,21 +11,21 @@ function CreateAccount() {
   
     function validate(field, label) {
       if(!field) {
-          setStatus('Error ' + label);
-          setTimeout(() => setStatus(''), 3000);
+          setStatus('Error, something is missing please make sure all the fields are filled');
+          setTimeout(() => setStatus(''), 6000);
           return false;
       }
       return true;
     }
   
     function handleCreate() {
-      console.log(name, email, password);
-      if(!validate(name, 'name')) return;
-      if(!validate(email, 'email')) return;
-      if(!validate(password, 'password')) return;
+      //console.log(name, email, password);
+      if(!validate(name, 'name') || !validate(email, 'email') || !validate(password, 'password')) return console.log('Something is missing please make sure all the fields are filled'); //any of the fields are empty
+
+      if(validate(name, 'name') && validate(email, 'email') && validate(password, 'password')) {
       ctx.users.push({name, email, password, balance: 100});
       console.log(ctx.users);
-      setShow(false);
+      setShow(false);}
     }
   
       function clearForm() {

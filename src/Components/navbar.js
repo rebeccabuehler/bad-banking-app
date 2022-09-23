@@ -11,7 +11,9 @@ function Navbar() {
             <button
               className="navbar-toggler"
               type="button"
-              data-bs-toggle="collapse"
+              data-bs-toggle="tooltip"
+              data-bs-placem="top"
+              data-bs-title="Bad Bank"
               data-bs-target="#navbarNav"
               aria-controls="navbarNav"
               aria-expanded="false"
