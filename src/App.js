@@ -31,7 +31,7 @@ function App() {
     },
   ]; //this is the starting accounts and when they add an account in create account it should update the account.
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
     <Navbar/>
     <UserContext.Provider value={{users: [
       {name: 'Rebecca Buehler ', email:'rebecca.buehler02@gmail.com', password:'secret2022!', balance:100},
