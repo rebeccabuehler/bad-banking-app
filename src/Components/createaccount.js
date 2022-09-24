@@ -1,7 +1,7 @@
 import React from "react";
 import { UserContext } from "./context";
 import Card from "./context";
-function CreateAccount({accountUsers}) {
+function CreateAccount() {
   const [show, setShow] = React.useState(true);
   const [status, setStatus] = React.useState("");
   const [name, setName] = React.useState("");
@@ -36,8 +36,8 @@ function CreateAccount({accountUsers}) {
       validate(email, "email") &&
       validate(password, "password")
     ) {
-      accountUsers.push({ name, email, password, balance: 100 });
-      console.log(accountUsers);
+      ctx.users.push({ name, email, password, balance: 100 });
+      console.log(ctx.users);
       setShow(false);
     }
   }

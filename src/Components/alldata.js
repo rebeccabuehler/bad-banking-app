@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./context";
 import { UserContext } from "./context";
 
-function AllData({accountUsers}) {
+function AllData() {
   const ctx = React.useContext(UserContext);
   return (
     <Card
@@ -12,7 +12,7 @@ function AllData({accountUsers}) {
       title="Ours Users"
       text="Accounts:"
       body={<ul>
-        {accountUsers.map(user => {
+        {ctx.users.map(user => {
           return (
             <li key={user.email}>
               {user.name} - Balance: ${user.balance}
