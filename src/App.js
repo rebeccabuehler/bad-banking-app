@@ -10,12 +10,26 @@ import { UserContext } from './Components/context';
 import './App.css';
 
 function App() {
-    // const accountUsers = [
-    // {name: 'Rebecca Buehler ', email:'rebecca.buehler02@gmail.com', password:'secret2022!', balance:100},
-    // {name: 'James Smith', email:'jsmith@gmail.com', password:'Bank1020!', balance:100},
-    // {name: 'Jane Doe', email:'janedoe@yahoo.com', password:'JaneDoe!', balance:100}
-    // ]; //see if you can export this as a variable and then push to this variable with create account and it should update alldata.
-
+  const accountUsers = [
+    {
+      name: "Rebecca Buehler ",
+      email: "rebecca.buehler02@gmail.com",
+      password: "secret2022!",
+      balance: 100,
+    },
+    {
+      name: "James Smith",
+      email: "jsmith@gmail.com",
+      password: "Bank1020!",
+      balance: 100,
+    },
+    {
+      name: "Jane Doe",
+      email: "janedoe@yahoo.com",
+      password: "JaneDoe!",
+      balance: 100,
+    },
+  ]; //this is the starting accounts and when they add an account in create account it should update the account.
   return (
     <BrowserRouter>
     <Navbar/>
@@ -26,10 +40,10 @@ function App() {
       ]}}>
     <Routes>
     <Route path="/Component/home" exact element={<Home/>} />
-    <Route path="/Component/createaccount" element={<CreateAccount/>} />
+    <Route path="/Component/createaccount" element={<CreateAccount accountUsers={accountUsers}/>} />
     <Route path="/Component/deposit" element={<Deposit/>} />
     <Route path="/Component/withdraw" element={<Withdraw/>} />
-    <Route path="/Component/alldata" element={<AllData/>} />
+    <Route path="/Component/alldata" element={<AllData accountUsers={accountUsers}/>} />
     </Routes>
     </UserContext.Provider>
     </BrowserRouter>

@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./context";
 import { UserContext } from "./context";
 
-function AllData() {
+function AllData({accountUsers}) {
   const ctx = React.useContext(UserContext);
   return (
     <Card
@@ -11,8 +11,15 @@ function AllData() {
       header="All Account Data"
       title="Ours Users"
       text="Accounts:"
-      //body={<div>{ctx.users.map(({name, email, password, balance}))}</div>}
-      body={<pre>{JSON.stringify(ctx.users)}</pre>}
+      body={<ul>
+        {accountUsers.map(user => {
+          return (
+            <li key={user.email}>
+              {user.name} - Balance: ${user.balance}
+            </li>
+          )
+        })}
+      </ul>}
     />
   );
 }
