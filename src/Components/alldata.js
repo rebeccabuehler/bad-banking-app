@@ -8,9 +8,9 @@ function AllData() {
     <Card
       bgcolor="primary"
       txtcolor="white"
-      header="All Account Data"
-      title="Ours Users"
-      text="Accounts:"
+      header="Welcome to Bad Bank"
+      title="Account Data"
+      text="Our Users:"
       body={<ul>
         {ctx.users.map(user => {
           return (

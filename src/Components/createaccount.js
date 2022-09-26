@@ -99,7 +99,7 @@ function CreateAccount() {
           </>
         ) : (
           <>
-            <h5>Success</h5>
+            <h5>Success!</h5>
             <button
               type="submit"
               className="btn btn-light"
@@ -108,13 +108,6 @@ function CreateAccount() {
             >
               Add Another Account
             </button>
-            <br />
-            <a href="/Component/deposit" className="btn btn-light">
-              Go to Deposit
-            </a>
-            <a href="/Component/withdraw" className="btn btn-light">
-              Go to Withdraw
-            </a>
           </>
         )
       }
