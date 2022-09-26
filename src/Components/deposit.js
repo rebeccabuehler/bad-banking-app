@@ -8,14 +8,11 @@ const Deposit = () => {
   const [password, setPassword] = React.useState("");
   const [show, setShow] = React.useState(true);
   const [status, setStatus] = React.useState("");
-  const [totalState, setTotalState] = React.useState(0);
-//   var accountBalance = ctx.users.map((user) => {
-//     if (user.email === email) return email; //figure out how to make it the one balance and not all three
-//   }); why isn't it returning a value?
+  const [totalState, setTotalState] = React.useState(ctx.users[2].balance);
   let transactionState = 0; // state of this transaction
   let accountStatus = `Account Balance $ ${totalState}`;
   //console.log("Rendering Account");
-
+  //see if you can find the index of an account based on login, then set the index in totalstate to that index and balance should update.
   function validate(field, label) {
     if (!field) {
       setStatus("Error " + label);
@@ -27,7 +24,6 @@ const Deposit = () => {
 
   function handleLogin() {
     console.log(email, password);
-    //console.log(accountBalance);
     if (!validate(email, "email")) return;
     if (!validate(password, "password")) return;
     setShow(false);
