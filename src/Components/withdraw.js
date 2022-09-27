@@ -35,6 +35,7 @@ const Withdraw = () => {
   };
   const handleSubmit = (event) => {
     setTotalState(totalState - transactionState);
+    ctx.users[2].balance = totalState - transactionState;
     event.preventDefault();
   };
   return (
