@@ -11,8 +11,7 @@ const Deposit = () => {
   const [totalState, setTotalState] = React.useState(ctx.users[2].balance);
   let transactionState = 0; // state of this transaction
   let accountStatus = `Account Balance $ ${totalState}`;
-  //console.log("Rendering Account");
-  //see if you can find the index of an account based on login, then set the index in totalstate to that index and balance should update.
+  
   function validate(field, label) {
     if (!field) {
       setStatus("Error " + label);
@@ -24,6 +23,12 @@ const Deposit = () => {
 
   function handleLogin() {
     console.log(email, password);
+    for(let i = 0; i < ctx.users.length; i++) {
+      if(ctx.users[i].email === email) {
+        setTotalState(ctx.users[i].balance);
+        console.log(totalState);
+      }
+    }
     if (!validate(email, "email")) return;
     if (!validate(password, "password")) return;
     setShow(false);
@@ -35,7 +40,11 @@ const Deposit = () => {
   };
   const handleSubmit = (event) => {
     setTotalState(totalState + transactionState);
-    ctx.users[2].balance = totalState + transactionState;
+    for(let i = 0; i < ctx.users.length; i++) {
+      if(ctx.users[i].email === email) {
+        ctx.users[i].balance = totalState + transactionState;
+      }
+    }
     event.preventDefault();
   };
   return (

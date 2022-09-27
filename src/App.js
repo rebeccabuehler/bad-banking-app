@@ -15,7 +15,7 @@ function App() {
     <Navbar/>
     <UserContext.Provider value={{users: [
       {name: 'Rebecca Buehler ', email:'rebecca.buehler02@gmail.com', password:'secret2022!', balance:100},
-      {name: 'James Smith', email:'jsmith@gmail.com', password:'Bank1020!', balance:100},
+      {name: 'James Smith', email:'jsmith@gmail.com', password:'Bank1020!', balance:120},
       {name: 'Jane Doe', email:'janedoe@yahoo.com', password:'JaneDoe!', balance:100}
       ]}}>
     <Routes>
