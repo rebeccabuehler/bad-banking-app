@@ -97,7 +97,7 @@ const Deposit = () => {
                 bgcolor="primary"
                 txtcolor="white"
                 header={<div id="total">{accountStatus}</div>}
-                text="Deposit:"
+                text="Withdraw:"
                 body={
                   <>
                     {" "}
