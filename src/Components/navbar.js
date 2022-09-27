@@ -6,7 +6,7 @@ function Navbar() {
       <>
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="container-fluid">
-            <Link className="navbar-brand" aria-current="page" to="/Component/home" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Welcome to Bad Bank!">
+            <Link className="navbar-brand active" aria-current="page" to="/Component/home" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Welcome to Bad Bank!">
               Bad Bank
             </Link>
             <button

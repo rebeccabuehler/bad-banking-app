@@ -39,6 +39,10 @@ const Deposit = () => {
     transactionState = Number(event.target.value);
   };
   const handleSubmit = (event) => {
+    if(transactionState < 0) {
+      alert("Negative funds, please enter again");
+      setShow(true);
+    } else {
     setTotalState(totalState + transactionState);
     for(let i = 0; i < ctx.users.length; i++) {
       if(ctx.users[i].email === email) {
@@ -46,6 +50,8 @@ const Deposit = () => {
       }
     }
     event.preventDefault();
+    alert("Success Funds Deposited!");
+  }
   };
   return (
     <Card
